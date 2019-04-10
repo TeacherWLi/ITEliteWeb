@@ -4,8 +4,7 @@
 __author__ = 'W. Li (liw@sicnu.edu.cn)'
 
 
-from flask import Flask
-
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -20,15 +19,18 @@ def hello():
 
 @app.route('/')
 def index():
-    return "Home Page"
+    return render_template("index.html", title_data='test')
+    # return "<html><body><h1 align=\"center\">Home Page Header</h1></body></html>"
+    # return "Home Page"
 
 
 @app.route('/login')
 def login():
-    return 'Login Page'
+    return render_template("longin.html")
+    # return 'Login Page'
 
 
-app.run()
+app.run(debug='True')
 
 
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        IT Elite Header Image
+    </header>
+    <nav>
+        <ul>
+            <li>首页</li>
+            <li>登录</li>
+        </ul>
+    </nav>
+    <div id="container">
+        {% block container %}
+        {% endblock %}
+    </div>
+    <footer>
+        copyright liwei 2019<br>
+        contact liw@sicnu.edu.cn
+    </footer>
+    {% block scripts %}
+        <script src="{{ url_for('static', filename='js/general.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

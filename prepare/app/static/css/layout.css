@@ -1,0 +1,24 @@
+header {
+    text-align: center;
+    height: 100px;
+    background: beige;
+}
+
+nav {
+    background: antiquewhite;
+}
+
+nav ul li {
+    display: inline;
+}
+
+footer {
+    background: cornsilk;
+    height: 50px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#container {
+    background: antiquewhite;
+}
