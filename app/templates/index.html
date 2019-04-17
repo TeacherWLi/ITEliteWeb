@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}首页 - ITElite{% endblock %}
+
+{% block container %}
+    {% set stu_info = ['李巍', '崔凌云', '陈婷婷', '屠瑶'] %}
+    {% for stu in stu_info %}
+        <p>{{ stu }}的个人主页</p>
+    {% endfor %}
+{% endblock %}
+
+
+
+

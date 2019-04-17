@@ -4,4 +4,10 @@
 
 {% block container %}
     主页内容
+    {% set stu_info = ['LW', 'CLY', 'CTT', 'WQQ'] %}
+
+    {% for stu in stu_info %}
+        {{ stu }} 的个人主页。<br>
+    {% endfor %}
+
 {% endblock %}
