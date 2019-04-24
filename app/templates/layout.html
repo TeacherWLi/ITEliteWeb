@@ -3,60 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet"
-          href="{{ url_for('static', filename="css/layout.css") }}">
+          href="{{ url_for('static', filename='css/layout.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 <header>
     <div class="container">
-        <a href="{{ url_for("login") }}">
-            <img src="{{ url_for("static", filename="image/logo.png") }}", alt="logo">
+        <a href="{{ url_for('login') }}">
+            <img src="{{ url_for('static', filename='image/logo.png') }}", alt="logo">
         </a>
-    </div>
-    <div class="banner" id="banner">
-        <a href="javascript:void(0)">
-            <img src="{{ url_for('static', filename='image/bg1.jpg') }}"
-                 class="banner-slide slide-active">
-        </a>
-        <a href="javascript:void(0)">
-            <img src="{{ url_for('static', filename='image/bg2.jpg') }}"
-                 class="banner-slide">
-        </a>
-        <a href="javascript:void(0)">
-            <img src="{{ url_for('static', filename='image/bg3.jpg') }}"
-                 class="banner-slide">
-        </a>
-    </div>
-
-    <!-- 上一张，下一张按钮 -->
-    <a href="javascript:void(0)" class="button prev" id="prev">
-        <img src="{{ url_for("static", filename="image/arrow.png") }}"
-             class="arrow-img">
-    </a>
-    <a href="javascript:void(0)" class="button next" id="next">
-        <img src="{{ url_for("static", filename="image/arrow.png") }}"
-             class="arrow-img">
-    </a>
-
-    <!-- 圆点导航 -->
-    <div class="dots" id="dots">
-        <span class="dot-active"></span>
-        <span></span>
-        <span></span>
+        <nav>
+            <a class="Home menu-active" href="#">Home</a>
+            <a class="Plan" href="#">Plan</a>
+            <a class="Member" href="#">Member</a>
+            <a class="About" href="#">About</a>
+            <a class="Join" href="#">Join</a>
+            <a class="Login" href="#">Login</a>
+        </nav>
     </div>
 </header>
-<nav>
-    <ul>
-        <li>首页</li>
-        <li>登录</li>
-    </ul>
-</nav>
-<div class="container">
-    {% block container %}{% endblock %}
-</div>
+
+
 <footer>
-    copyright Liwei 2019 <br>
-    liw@sicnu.edu.cn
+    <div class="container">
+        <P>Copyright © 2019 LiWei All Rights Reserved.</P>
+        <span>
+            <img src="{{ url_for('static', filename='image/weichat.png') }}"/>
+            <img src="{{ url_for('static', filename='image/sina.png') }}"/>
+            <img src="{{ url_for('static', filename='image/qq.png') }}"/>
+        </span>
+    </div>
 </footer>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

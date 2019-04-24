@@ -31,106 +31,63 @@ header > .container {
     margin: 0 auto 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-.banner {
-    height: 300px;
-    overflow: hidden;
-    /*background-color: red;*/
+header > .container > nav {
+    float: right;
 }
 
-.banner-slide {
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    display: none;
-}
-
-.slide-active {
-    display: block;
-}
-
-.button {
-    position: absolute;
-    width: 30px;
-    height: 60px;
-    top: 120px;
-}
-
-.arrow-img {
-    width: 30px;
-    height: 60px;
-}
-
-.button:hover {
-    background-color: #333;
-    opacity: 0.6;
-}
-
-.prev {
-    transform: rotate(180deg);
-}
-
-.next {
-    left: auto;
-    right: 0px;
-}
-
-.dots {
-    position: absolute;
-    right: 30px;
-    bottom: 16px;
-    text-align: right;
-}
-
-.dots span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
-    border-radius: 50%;
-    background-color: rgba(7, 17, 27, 0.4);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
-    margin-left: 6px;
-    cursor: pointer;
-}
-
-.dots span.dot-active {
-    box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
-    background-color: #FFF;
-}
-
-
-
-
-
-
-
-nav {
-    background-color: aqua;
-}
-
-nav ul li {
-    list-style: none;
-    display: inline;
-}
-
-footer {
-    background: cornsilk;
-    height: 50px;
+header > .container > nav > a {
+    width: 110px;
+    height: 73px;
+    line-height: 73px;
+    font-size: 24px;
     text-align: center;
-    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
 }
 
-#container {
-    background: antiquewhite;
-    height: 300px;
+header > .container > nav > a.Home { background-color: #433B90; }
+header > .container > nav > a.Plan { background: #017FCB; }
+header > .container > nav > a.Member { background: #78B917; }
+header > .container > nav > a.About { background: #FEB800; }
+header > .container > nav > a.Join { background: #F27C01; }
+header > .container > nav > a.Login { background: #D40112; }
+
+header > .container > nav > a:hover,
+header > .container > nav > a:active {
+    padding-bottom: 7px;
+}
+
+
+/* ------------------------------------------------------------- */
+/* -------- footer -------- */
+footer {
+    background-color: #000000;
+}
+
+footer > .container {
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto 0 auto;
+}
+
+footer > .container > p {
+    line-height: 64px;
+    float: left;
+    color: #FFFFFF;
+}
+
+footer > .container > span {
+    float: right;
+    margin: 14px 40px;
+}
+
+footer > .container > span > img {
+    margin-left: 4px;
+    opacity: 0.7;
+}
+
+footer > .container > span > img:hover {
+    opacity: 1;
+    cursor: pointer;
 }
