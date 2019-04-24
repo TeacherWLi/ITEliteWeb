@@ -7,7 +7,12 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<header id="header">
+<header>
+    <div class="container">
+        <a href="{{ url_for("login") }}">
+            <img src="{{ url_for("static", filename="image/logo.png") }}", alt="logo">
+        </a>
+    </div>
     <div class="banner" id="banner">
         <a href="javascript:void(0)">
             <img src="{{ url_for('static', filename='image/bg1.jpg') }}"
