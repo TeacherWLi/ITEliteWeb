@@ -19,7 +19,7 @@ ul {
     list-style: none;
 }
 
-
+/* ------------------------*/
 /* -------- header --------*/
 header {
     height: 80px;
@@ -29,6 +29,12 @@ header {
 header > .container {
     width: 1200px;
     margin: 0 auto 0 auto;
+}
+
+header > .container > a {
+    display: block;
+    float: left;
+    margin: 5px 25px;
 }
 
 header > .container > nav {
@@ -59,7 +65,10 @@ header > .container > nav > a:active {
 }
 
 
-/* ------------------------------------------------------------- */
+
+
+
+/* ------------------------ */
 /* -------- footer -------- */
 footer {
     background-color: #000000;

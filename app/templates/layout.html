@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/layout.css') }}">
+    {% block CSS %}{% endblock %}
+
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -23,6 +26,7 @@
     </div>
 </header>
 
+{% block section %}{% endblock %}
 
 <footer>
     <div class="container">
