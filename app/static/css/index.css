@@ -13,7 +13,7 @@
 
 .banner > ul {
     position: relative;
-    width: 1490px;
+    width: 1200px;
     height: 538px;
     margin: 0 auto;
     margin-top: 10px;
@@ -70,7 +70,7 @@
 
 .main h1 {
     font-size: 30px;
-    font-weight: lighter;
+    /*font-weight: lighter;*/
     margin-bottom: 23px;
 }
 
