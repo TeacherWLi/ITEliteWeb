@@ -9,17 +9,20 @@
 {% block section %}
     <section class="auth">
         <div class="container">
-
+            <h1>用户登录</h1>
+            <form>
+                <span class="label">用户名</span>
+                <input type="text">
+                <span class="label">密码</span>
+                <input type="password">
+                <input type="submit">
+                <button type="submit" class="button buttonBlue">Subscribe
+                    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                </button>
+            </form>
         </div>
-
     </section>
-<form>
-    用户名：
-    <input type="text"> <br>
-    密码：
-    <input type="password"> <br>
-    <input type="submit">
-</form>
+
 {% endblock %}
 
 
