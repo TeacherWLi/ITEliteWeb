@@ -1,13 +1,78 @@
-{% extends "layout.html" %}     {# 继承父类 #}
+{% extends "layout.html" %}
+
+{% block CSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
 
 {% block title %}首页 - ITElite{% endblock %}
 
-{% block container %}
-    主页内容
-    {% set stu_info = ['LW', 'CLY', 'CTT', 'WQQ'] %}
-
-    {% for stu in stu_info %}
-        {{ stu }} 的个人主页。<br>
-    {% endfor %}
-
+{% block section %}
+    <section class="banner">
+        <ul>
+            <li class="active"><img src="{{ url_for('static',
+             filename='image/banner/banner1.jpg') }}" alt=""/></li>
+            <li class="left"><img src="{{ url_for('static',
+             filename='image/banner/banner2.jpg') }}" alt=""/></li>
+            <li class="right"><img src="{{ url_for('static',
+             filename='image/banner/banner3.jpg') }}" alt=""/></li>
+        </ul>
+    </section>
+    <section class="main">
+        <aside>
+            <h1>我们的 <samp>课程</samp></h1>
+            <dl>
+                <dt>Hyper Text Markup Language</dt>
+                <dd><img src="{{ url_for('static', filename='image/Course/05_05.png') }}"/></dd>
+                <dd>
+                    超文本标记语言(Hyper Text Markup Language)，标准通用标记语言下的一个应用。
+                    是网页制作所必备的一种标记语言 (markup language)。
+                </dd>
+            </dl>
+            <dl>
+                <dt>Cascading Style Sheets</dt>
+                <dd><img src="{{ url_for('static', filename='image/Course/06_04.png') }}"/></dd>
+                <dd>
+                    层叠样式表(Cascading Style Sheets, CSS)是一种用来表现HTML或
+                    XML等文件样式的计算机语言。
+                </dd>
+            </dl>
+            <dl>
+                <dt>JavaScript</dt>
+                <dd><img src="{{ url_for('static', filename='image/Course/09_07.png') }}"/></dd>
+                <dd>
+                    JavaScript是一种动态类型、弱类型、基于原型的语言。用来给HTML网页增加动态功能，
+                    广泛应用于各类客户端。
+                </dd>
+            </dl>
+            <dl>
+                <dt>JQuery</dt>
+                <dd><img src="{{ url_for('static', filename='image/Course/02_09.png') }}"/></dd>
+                <dd>
+                    jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。
+                </dd>
+            </dl>
+        </aside>
+        <article>
+            <h1>Welcome to <samp>Join Our Family!</samp></h1>
+            <p>
+                We provide the latest knowledge to help you cope with the
+                changing world!
+            </p>
+            <img src="{{ url_for('static', filename='image/article.jpg') }}"/>
+            <p>
+                We hope that all the students who love the Internet can be
+                more convenient access to learning resources, using the
+                Internet thinking to change our learning.
+            </p>
+            <p>
+                We are family and all the resource is free. We focus on IT skills
+                education and practice, consistent with the
+                development trend of the Internet development.
+            </p>
+        </article>
+    </section>
 {% endblock %}
+
+
+
+

@@ -2,29 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/layout.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <header>
-        IT Elite Header Image
-    </header>
-    <nav>
-        <ul>
-            <li>首页</li>
-            <li>登录</li>
-        </ul>
-    </nav>
-    <div id="container">
-        {% block container %}
-        {% endblock %}
+<header>
+    <div class="container">
+        <a href="{{ url_for('login') }}">
+            <img src="{{ url_for('static', filename='image/logo.png') }}", alt="logo">
+        </a>
+        <nav>
+            <a class="Home menu-active" href="#">Home</a>
+            <a class="Plan" href="#">Plan</a>
+            <a class="Member" href="#">Member</a>
+            <a class="About" href="#">About</a>
+            <a class="Join" href="#">Join</a>
+            <a class="Login" href="#">Login</a>
+        </nav>
     </div>
-    <footer>
-        copyright liwei 2019<br>
-        contact liw@sicnu.edu.cn
-    </footer>
-    {% block scripts %}
-        <script src="{{ url_for('static', filename='js/general.js') }}"></script>
-    {% endblock %}
+</header>
+
+{% block section %}{% endblock %}
+
+<footer>
+    <div class="container">
+        <P>Copyright © 2019 LiWei All Rights Reserved.</P>
+        <span>
+            <img src="{{ url_for('static', filename='image/weichat.png') }}"/>
+            <img src="{{ url_for('static', filename='image/sina.png') }}"/>
+            <img src="{{ url_for('static', filename='image/qq.png') }}"/>
+        </span>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
